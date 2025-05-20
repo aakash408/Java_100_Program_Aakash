@@ -10,17 +10,18 @@ public class Scanner_Program1 {
 		float b;
 		String s;
 
-		Scanner in = new Scanner(System.in);
-		System.out.println("Enter a String");
+		try (Scanner in = new Scanner(System.in)) {
+			System.out.println("Enter a String");
 
-		s = in.nextLine();
+			s = in.nextLine();
 
-		System.out.println("You Entered String " + s);
-		System.out.println("Enter an Integer");
-		a = in.nextInt();
-		System.out.println("You Entered a Integer " + a);
-		System.out.println("Enter a Float");
-		b = in.nextFloat();
+			System.out.println("You Entered String " + s);
+			System.out.println("Enter an Integer");
+			a = in.nextInt();
+			System.out.println("You Entered a Integer " + a);
+			System.out.println("Enter a Float");
+			b = in.nextFloat();
+		}
 		System.out.println("You Entered a Float " + b);
 	}
 }
